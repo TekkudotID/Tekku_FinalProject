@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
     return view('utama');
 });
+=======
+    return view('home');
+});
+>>>>>>> 187efee5f197e5e98605e4f4ffa8ed21f545b353
