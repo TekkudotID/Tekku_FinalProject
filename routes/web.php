@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('utama');
+    return view('welcome');
 });
-=======
-    return view('home');
-});
->>>>>>> 187efee5f197e5e98605e4f4ffa8ed21f545b353
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
