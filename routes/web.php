@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('admin.home');
 });
 
+Route::get('/home', function () {
+    // return view('welcome');
+    return view('utama');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

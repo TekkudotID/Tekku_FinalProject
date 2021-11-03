@@ -1,204 +1,754 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tekku - Layanan Penyedia Jasa</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-
-</head>
-<body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Tekku<span>.ID</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Beranda</a></li>
-                <li><a href="#about" class="menu-btn">Tentang Kami</a></li>
-                <li><a href="#services" class="menu-btn">Layanan</a></li>
-
-                <li><a href="#client" class="menu-btn">Client</a></li>
-                <li><a href="#contact" class="menu-btn">Kontak</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Selamat Datang di</div>
-                <div class="text-2">TEKKU</div>
-                <div class="text-3">Penyedia Jasa Pembuatan <span class="typing"></span></div>
-                <a href="#services">Order</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">Tentang Kami</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="assets/img/logo.png" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">Kami adalah Penyedia jasa pembuatan <span class="typing-2"></span></div>
-                    <p>Sebagai jasa pembuatan website profesional, TekkuID adalah partner terbaik untuk bisnis Anda dalam menghadapi Era Digital yang serba teknologi. Perluas jangkauan bisnis Anda, jadikan bisnis Anda sebagai bisnis modern yang mudah dijangkau semua orang di Indonesia.</p>
-                    <a href="tentangkami.html">Kenali Lebih Lanjut</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- services section start -->
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">Layanan</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="pempek"></i>
-                        <div class="text" onclick="location.href='pempek.html';">Website</div>
-                        <p onclick="location.href='website.html';">Website perusahaan, ecommerce, portal berita, dll.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="enicila"></i>
-                        <div class="text" onclick="location.href='aplikasi.html';">Aplikasi Android</div>
-                        <p>ecommerce, cek resi, restoran, dll.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="Helly"></i>
-                        <div class="text" onclick="location.href='design.html';">Design</div>
-                        <p>Logo, Ilustrator, Produk design, Banner Iklan, dll.</p>
-                    </div>
-                </div>
-               </div>
-            </div>
-        </div>
-    </section>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>B-Hero : Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Slick slider -->
+    <link href="{{asset('css/slick.css')}}" rel="stylesheet">
+    <!-- Gallery Lightbox -->
+    <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
+    <!-- Skills Circle CSS  -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">
 
 
+    <!-- Main Style -->
+    <link href="{{asset('css/style.css') }}" rel="stylesheet">
 
-    <!-- teams section start -->
-    <section class="teams" id="client">
-        <div class="max-width">
-            <h2 class="title">Client Kami</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img src="assets/img/gdrive.png" alt="">
-                        <div class="text">Google Drive</div>
+    <!-- Fonts -->
 
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="assets/img/googlemaps.png" alt="">
-                        <div class="text">Google Maps</div>
+    <!-- Google Fonts Raleway -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700" rel="stylesheet">
+	<!-- Google Fonts Open sans -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
 
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="assets/img/firebase.png" alt="">
-                        <div class="text">Firebase</div>
 
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="assets/img/sqlite.png" alt="">
-                        <div class="text">SQLiteb</div>
+	</head>
+  <body>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   <!--START SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  <!-- END SCROLL TOP BUTTON -->
 
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Hubungi Kami</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Kenali Lebih Dekat</div>
-                    <p>Untuk kritik dan saran, serta kesempatan bekerja sama dengan kami, silakan hubungi kami. </p>
-                    <div class="icons">
-                        {{-- <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Nama</div>
-                                <div class="sub-title">TekkuID</div>
-                            </div>
-                        </div> --}}
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">tekkudotid@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Alamat</div>
-                                <div class="sub-title">Jalan Guntur Raya No.1, Kelurahan Kayuringin Jaya, Bekasi Selatan, Kota Bekasi, Jawa Barat 17144</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column right">
-                    <div class="text">Kirim Kami Pesan</div>
-                    <form action="https://formsubmit.co/fiqih1666@gmail.com" method="POST">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Nama" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subyek" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Pesan.." required></textarea>
-                        </div>
-                        <div class="button">
-                            <button type="submit">Kirim</button>
-                        </div>
-                    </form>
-                    <div id="status"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  	<!-- Start Header -->
+	<header id="mu-hero">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light mu-navbar">
+				<!-- Text based logo -->
+				<a class="navbar-brand mu-logo" href="index.html"><span>B-HERO</span></a>
+				<!-- image based logo -->
+			   	<!-- <a class="navbar-brand mu-logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="fa fa-bars"></span>
+			  </button>
 
-    <!-- footer section start -->
-    <footer>
-        <span>Powered by <a href="https://www.infoteks17.my.id">Tekku.id</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
-    </footer>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto mu-navbar-nav">
+			      <li class="nav-item active">
+			        <a href="index.html">Home</a>
+			      </li>
+			      <li class="nav-item"><a href="about-us.html">About us</a></li>
+			      <li class="nav-item"><a href="services.html">Services</a></li>
+			      <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+			       <li class="nav-item dropdown">
+				        <a class="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+				       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="blog.html">Blog Archive</a>
+				          <a class="dropdown-item" href="blog-single.html">Blog Single</a>
+				        </div>
+				    </li>
+			        <li class="nav-item"><a href="contact.html">Contact us</a></li>
+			        <li class="nav-item"><a href="404.html">404 Page</a></li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
 
-    <script src="js/script.js"></script>
-</body>
+	<!-- Start slider area -->
+	<div id="mu-slider">
+		<div class="mu-slide">
+			<!-- Start single slide  -->
+			<div class="mu-single-slide">
+				<img src="assets/images/slider-img-1.jpg" alt="slider img">
+				<div class="mu-single-slide-content-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mu-single-slide-content">
+									<h1>Welcome to b-hero</h1>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+									<a class="mu-primary-btn" href="#">Read more <span class="fa fa-long-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End single slide  -->
+
+			<!-- Start single slide  -->
+			<div class="mu-single-slide">
+				<img src="assets/images/slider-img-2.jpg" alt="slider img">
+				<div class="mu-single-slide-content-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mu-single-slide-content">
+									<h1>We Promote Your Business</h1>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+									<a class="mu-primary-btn" href="#">Read more <span class="fa fa-long-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End single slide  -->
+
+			<!-- Start single slide  -->
+			<div class="mu-single-slide">
+				<img src="assets/images/slider-img-3.jpg" alt="slider img">
+				<div class="mu-single-slide-content-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mu-single-slide-content">
+									<h1>Free Multipurpose Template</h1>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+									<a class="mu-primary-btn" href="#">Read more <span class="fa fa-long-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End single slide  -->
+		</div>
+	</div>
+	<!-- End Slider area -->
+
+
+	<!-- Start main content -->
+	<main>
+		<!-- Start About -->
+		<section id="mu-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-about-area">
+							<!-- Title -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mu-title">
+										<h2>Who we are</h2>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Start Feature Content -->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="mu-about-left">
+										<img class="" src="assets/images/about-us.jpg" alt="img">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mu-about-right">
+										<ul>
+											<li>
+												<h3>Our Mission</h3>
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+											</li>
+											<li>
+												<h3>Our Vision</h3>
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+											</li>
+											<li>
+												<h3>Our Valuse</h3>
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Feature Content -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End About -->
+
+		<!-- Call to Action -->
+		<div id="mu-call-to-action">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-call-to-action-area">
+							<div class="mu-call-to-action-left">
+								<h2>This is a simple hero unit, a simple jumbotron-style</h2>
+								<p>component for calling extra attention to featured content or information.</p>
+							</div>
+							<a href="#" class="mu-primary-btn mu-quote-btn">Get a Quote <i class="fa fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Start Services -->
+		<section id="mu-service">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-service-area">
+							<!-- Title -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mu-title">
+										<h2>Our exclusive services</h2>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Start Service Content -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mu-service-content">
+										<div class="row">
+											<!-- Start single service -->
+											<div class="col-md-4">
+												<div class="mu-single-service">
+													<div class="mu-single-service-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+													<div class="mu-single-service-content">
+														<h3>E-Commerce</h3>
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor commodo .</p>
+													</div>
+												</div>
+											</div>
+											<!-- End single service -->
+											<!-- Start single service -->
+											<div class="col-md-4">
+												<div class="mu-single-service">
+													<div class="mu-single-service-icon"><i class="fa fa-bullhorn" aria-hidden="true"></i></div>
+													<div class="mu-single-service-content">
+														<h3>Online Marketing</h3>
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor commodo .</p>
+													</div>
+												</div>
+											</div>
+											<!-- End single service -->
+											<!-- Start single service -->
+											<div class="col-md-4">
+												<div class="mu-single-service">
+													<div class="mu-single-service-icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+													<div class="mu-single-service-content">
+														<h3>Web Design</h3>
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor commodo .</p>
+													</div>
+												</div>
+											</div>
+											<!-- End single service -->
+											<!-- Start single service -->
+											<div class="col-md-4">
+												<div class="mu-single-service">
+													<div class="mu-single-service-icon"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+													<div class="mu-single-service-content">
+														<h3>Mobile Development</h3>
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor commodo .</p>
+													</div>
+												</div>
+											</div>
+											<!-- End single service -->
+											<!-- Start single service -->
+											<div class="col-md-4">
+												<div class="mu-single-service">
+													<div class="mu-single-service-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+													<div class="mu-single-service-content">
+														<h3>Customer Support</h3>
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor commodo .</p>
+													</div>
+												</div>
+											</div>
+											<!-- End single service -->
+											<!-- Start single service -->
+											<div class="col-md-4">
+												<div class="mu-single-service">
+													<div class="mu-single-service-icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+													<div class="mu-single-service-content">
+														<h3>Customization</h3>
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor commodo .</p>
+													</div>
+												</div>
+											</div>
+											<!-- End single service -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Service Content -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Services -->
+
+		<!-- Start Video -->
+		<div id="mu-video">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="mu-video-left">
+						<a href="#" class="mu-video-play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="mu-video-right">
+						<p>In this video from our "Talking business" series, our expert discusses the role a business plan can play in the success of your business.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Start Video Popup -->
+			<div class="mu-video-popup">
+				<div class="mu-video-iframe-area">
+					<a class="mu-video-close-btn" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+					<iframe width="854" height="480" src="https://www.youtube.com/embed/n9AVEl9764s" allowfullscreen></iframe>
+				</div>
+			</div>
+			<!-- End Video Popup -->
+
+		</div>
+		<!-- End Video -->
+
+		<!-- Start Portfolio -->
+		<section id="mu-portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-portfolio-area">
+							<!-- Title -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mu-title">
+										<h2>Our Recent Project</h2>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+									<!-- Start Portfolio Filter -->
+									<div class="mu-portfolio-filter-area">
+										<ul class="mu-simplefilter">
+							                <li class="active" data-filter="all">All<span>/</span></li>
+							                <li data-filter="1">Web design<span>/</span> </li>
+							                <li data-filter="2">Mobile Development<span>/</span></li>
+							                <li data-filter="3">E-commerces<span>/</span></li>
+							                <li data-filter="4"> Arts<span>/</span> </li>
+							                <li data-filter="5">Branding</li>
+							            </ul>
+									</div>
+
+									<!-- Start Portfolio Content -->
+									<div class="mu-portfolio-content">
+										<div class="filtr-container">
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="4">
+							                   <a class="mu-imglink" href="assets/images/portfolio/img-1.jpg" title="PAINTING">
+								                   	<img class="img-responsive" src="assets/images/portfolio/img-1.jpg" alt="image">
+								                   	<div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">PAINTING</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                   </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="5">
+							                    <a class="mu-imglink" href="assets/images/portfolio/img-2.jpg" title="BRANDING">
+							                    	<img class="img-responsive" src="assets/images/portfolio/img-2.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">BRANDING</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                    </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="3">
+							                    <a class="mu-imglink" href="assets/images/portfolio/img-3.jpg" title="E-COMMERCE">
+							                    	<img class="img-responsive" src="assets/images/portfolio/img-3.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">E-COMMERCE</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                    </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="1">
+							                    <a class="mu-imglink" href="assets/images/portfolio/img-4.jpg" title="WEB DESIGN">
+							                    	<img class="img-responsive" src="assets/images/portfolio/img-4.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">WEB DESIGN</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                    </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="2">
+							                    <a class="mu-imglink" href="assets/images/portfolio/img-5.jpg" title="MOBILE DEVELOPMENT">
+							                    	<img class="img-responsive" src="assets/images/portfolio/img-5.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	 <h4 class="mu-filter-item-title">MOBILE DEVELOPMENT</h4>
+								                    	 <span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                    </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="5">
+							                   <a class="mu-imglink" href="assets/images/portfolio/img-6.jpg" title="BRANDING">
+								                   	<img class="img-responsive" src="assets/images/portfolio/img-6.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">BRANDING</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+								                </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="3">
+							                   <a class="mu-imglink" href="assets/images/portfolio/img-7.jpg" title="E-COMMERCE">
+								                   	<img class="img-responsive" src="assets/images/portfolio/img-7.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">E-COMMERCE</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                   </a>
+							                </div>
+
+							                <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="4">
+							                    <a class="mu-imglink" href="assets/images/portfolio/img-8.jpg" title="PAINTING">
+							                    	<img class="img-responsive" src="assets/images/portfolio/img-8.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">PAINTING</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                    </a>
+							                </div>
+
+							                  <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="1">
+							                    <a class="mu-imglink" href="assets/images/portfolio/img-4.jpg" title="WEB DESIGN">
+							                    	<img class="img-responsive" src="assets/images/portfolio/img-4.jpg" alt="image">
+								                    <div class="mu-filter-item-content">
+								                    	<h4 class="mu-filter-item-title">WEB DESIGN</h4>
+								                    	<span class="fa fa-long-arrow-right"></span>
+								                    </div>
+							                    </a>
+							                </div>
+
+							            </div>
+									</div>
+									<!-- End Portfolio Content -->
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio -->
+
+		<!-- Start Counter -->
+		<section id="mu-counter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-counter-area">
+
+							<div class="mu-counter-block">
+								<div class="row">
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<span class="fa fa-suitcase"></span>
+											<div class="mu-single-counter-content">
+												<div class="counter-value" data-count="250">0</div>
+												<h5 class="mu-counter-name">Project</h5>
+											</div>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<span class="fa fa-user"></span>
+											<div class="mu-single-counter-content">
+												<div class="counter-value" data-count="56">0</div>
+												<h5 class="mu-counter-name">Clients</h5>
+											</div>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<span class="fa fa-coffee"></span>
+											<div class="mu-single-counter-content">
+												<div class="counter-value" data-count="15">0</div>
+												<h5 class="mu-counter-name">Stuff</h5>
+											</div>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<span class="fa fa-clock-o"></span>
+											<div class="mu-single-counter-content">
+												<div class="counter-value" data-count="290">0</div>
+												<h5 class="mu-counter-name">Day</h5>
+											</div>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Counter -->
+
+		<!-- Start Pricing Table -->
+		<section id="mu-pricing">
+			<div class="container">
+				@include('home.paket')
+			</div>
+		</section>
+		<!-- End Pricing Table -->
+
+		<!-- Start Client Testimonials -->
+		<section id="mu-testimonials">
+			<div class="container">
+				@include('home.testimoni')
+			</div>
+		</section>
+		<!-- End Client Testimonials -->
+
+		<!-- Start from blog -->
+		<section id="mu-from-blog">
+			<div class="container">
+				@include('home.blog')
+			</div>
+		</section>
+		<!-- End from blog -->
+
+		<!-- Start Newsletter -->
+		<section id="mu-newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-newsletter-area">
+							<!-- Title -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mu-title">
+										<h2>Subscribe Our newsletter</h2>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="mu-newsletter-content">
+										<form class="mu-subscribe-form">
+											<input type="email" placeholder="Write your e-mail here">
+											<button class="mu-subscribe-btn">Subscribe</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Newsletter -->
+
+		<!-- Start Clients -->
+		<div id="mu-clients">
+			<div class="container">
+				@include('home.client')
+			</div>
+		</div>
+		<!-- End Clients -->
+
+	</main>
+
+	<!-- End main content -->
+
+
+	<!-- Start footer -->
+	<footer id="mu-footer">
+		<div class="mu-footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="mu-single-footer">
+							<img class="mu-footer-logo" src="assets/images/logo.png" alt="logo">
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus. </p>
+							<div class="mu-social-media">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a class="mu-twitter" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="mu-pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+								<a class="mu-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="mu-youtube" href="#"><i class="fa fa-youtube"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="mu-single-footer">
+							<h3>Twitter feed</h3>
+							<ul class="list-unstyled">
+							  	<li class="media">
+								   <span class="fa fa-twitter"></span>
+								    <div class="media-body">
+								    	<p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+								    	<a href="#">2 hours ago</a>
+								    </div>
+							  	</li>
+							  	<li class="media">
+								   	<span class="fa fa-twitter"></span>
+								    <div class="media-body">
+								    	<p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+								    	<a href="#">2 hours ago</a>
+								    </div>
+							  	</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="mu-single-footer">
+							<h3>Useful link</h3>
+							<ul class="mu-useful-links">
+								<li><a href="#">Help Center</a></li>
+								<li><a href="#">Download Center</a></li>
+								<li><a href="#">User Account</a></li>
+								<li><a href="#">Support Forum</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="mu-single-footer">
+							<h3>Contact Information</h3>
+							<ul class="list-unstyled">
+							  <li class="media">
+							    <span class="fa fa-home"></span>
+							    <div class="media-body">
+							    	<p>349 Main St, Deseronto, ON K0K 1X0, Canada</p>
+							    </div>
+							  </li>
+							  <li class="media">
+							    <span class="fa fa-phone"></span>
+							    <div class="media-body">
+							       <p>+00 123 456 789 00</p>
+							     	<p>+ 00 254 632 548 00</p>
+							    </div>
+							  </li>
+							  <li class="media">
+							    <span class="fa fa-envelope"></span>
+							    <div class="media-body">
+							     <p>support@bhero.com</p>
+							     <p>help.behero@gmail.com</p>
+							    </div>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mu-footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-footer-bottom-area">
+							<p class="mu-copy-right">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End footer -->
+
+
+	<!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<!-- Slick slider -->
+    <script type="text/javascript" src="{{asset('js/slick.min.js')}}"></script>
+    <!-- Progress Bar -->
+    <script src="https://unpkg.com/circlebars@1.0.3/dist/circle.js"></script>
+    <!-- Filterable Gallery js -->
+    <script type="text/javascript" src="{{asset('js/jquery.filterizr.min.js')}}"></script>
+    <!-- Gallery Lightbox -->
+    <script type="text/javascript" src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+    <!-- Counter js -->
+    <script type="text/javascript" src="{{asset('js/counter.js')}}"></script>
+    <!-- Ajax contact form  -->
+    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+
+
+    <!-- Custom js -->
+	<script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
+
+	<!-- About us Skills Circle progress  -->
+	<script>
+		// First circle
+	    new Circlebar({
+        element : "#circle-1",
+        type : "progress",
+	      maxValue:  "90"
+	    });
+
+		// Second circle
+	    new Circlebar({
+        element : "#circle-2",
+        type : "progress",
+	      maxValue:  "84"
+	    });
+
+	    // Third circle
+	    new Circlebar({
+        element : "#circle-3",
+        type : "progress",
+	      maxValue:  "60"
+	    });
+
+	    // Fourth circle
+	    new Circlebar({
+        element : "#circle-4",
+        type : "progress",
+	      maxValue:  "74"
+	    });
+
+	</script>
+
+  </body>
 </html>
