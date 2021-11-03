@@ -23,6 +23,11 @@ Route::get('/home', function () {
     return view('utama');
 });
 
+Route::get('/project', function () {
+    // return view('welcome');
+    return view('home._navbar._project');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
